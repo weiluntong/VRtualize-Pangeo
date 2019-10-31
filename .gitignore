@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/vr_db_interaction/.vs/vr_db_interaction/v16/Server/sqlite3/db.lock
