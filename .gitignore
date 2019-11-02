@@ -1,0 +1,4 @@
+Documentation/SRS/build
+Documentation/SRS/.buildinfo
+Documentation/SRS/.vscode/*
+.vscode/*
