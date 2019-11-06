@@ -13,20 +13,18 @@ public class UsgsResources : IResources
 			fs.Read(b, 0, b.Length);
         }
 		int meshLength = 10813;
-		// List<List<float>> mesh = new List<List<float>>(meshLength);
-		// for (int i = 0; i < meshLength; i++)
-		// {
-		// 	mesh[i].Add(new List<float>());
-		// }
 		List<List<float>> mesh = new List<List<float>>(meshLength);
-		// for(var l = 0; l < meshLength; l++)
-		// {
-		// 	mesh[l] = new List<float>(meshLength);
-		// }
+		for(int i = 0; i < meshLength; i++)
+		{
+			mesh.Add(new List<float>(meshLength));
+			for (int j = 0; j < meshLength; j++)
+				mesh[i].Add(0);
+		}
+
 		for (int i = 0; i < b.Length; i += 4)
 		{
 			int idx = i / 4;
-			// mesh[idx/meshLength][idx%meshLength] = BitConverter.ToSingle(b, i);
+			mesh[idx/meshLength][idx%meshLength] = BitConverter.ToSingle(b, i);
 		}
 		return mesh;
 	}

@@ -16,7 +16,7 @@ namespace Tests
             Cache cachingObject = new Cache();
             UsgsResources resources = new UsgsResources();
             cachingObject.setMesh(resources);
-            
+            Assert.AreEqual(10813, cachingObject.getMesh().Count);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
